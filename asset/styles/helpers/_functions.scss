@@ -1,0 +1,12 @@
+@charset 'utf-8';
+
+// REM 求值
+// $vw_fontsize: 75
+@function rem($px) {
+    @return ($px / $vw_fontsize / 2) * 1rem;
+}
+
+// 图片百分比
+@function percentage($width, $height) {
+    @return ($height / $width) * 100%;
+}
