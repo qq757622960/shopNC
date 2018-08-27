@@ -594,3 +594,6 @@ li{list-style:none}
 .icon-iconfontmiaoxiansheng:before{content:"\e831"}
 .icon-zhifubao:before{content:"\e832"}
 .icon-shenghuojia:before{content:"\e833"}
+.mod_header{height:.6rem;background-color:#eee}
+.mod_sticky{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%;height:100vh;font-size:.16rem}
+.mod_sticky_cont{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto}

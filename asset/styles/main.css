@@ -1,9 +1,28 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-break: break-all;
+  word-wrap: break-word; }
+
 html {
   -ms-touch-action: none; }
 
+html {
+  font-size: 20vw; }
+  @media screen and (max-width: 320px) {
+    html {
+      font-size: 64px; } }
+  @media screen and (min-width: 540px) {
+    html {
+      font-size: 108px; } }
+
 body {
   font-family: Heiti, Heiti SC, DroidSans, DroidSansFallback, Arial, "Microsoft YaHei";
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+  font-size: 16px;
+  max-width: 540px;
+  min-width: 320px;
+  margin: 0 auto !important; }
 
 input {
   font-family: Arial, "Microsoft YaHei", sans-serif; }
@@ -136,15 +155,6 @@ i {
 
 li {
   list-style: none; }
-
-html {
-  font-size: 20vw; }
-  @media screen and (max-width: 320px) {
-    html {
-      font-size: 64px; } }
-  @media screen and (max-width: 480px) {
-    html {
-      font-size: 108px; } }
 
 @font-face {
   font-family: "iconfont";

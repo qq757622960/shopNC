@@ -1,11 +1,29 @@
 @charset "utf-8";
+
+* { box-sizing: border-box; word-break: break-all; word-wrap: break-word; }
+
 html {
     -ms-touch-action: none;
+}
+
+// REM 单位转换
+html {
+    font-size: ($vw_fontsize / ($vw_design / 2)) * 100vw;
+    @media screen and (max-width: $mobile_sm) {
+        font-size: $mobile_sm_fz;
+    }
+    @media screen and (min-width: $mobile_md) {
+        font-size: $mobile_md_fz;
+    }
 }
 
 body {
     font-family: Heiti, Heiti SC, DroidSans, DroidSansFallback, Arial, "Microsoft YaHei";
     background-color: #f5f5f5;
+    font-size: 16px;
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto !important;
 }
 
 input {
@@ -157,16 +175,6 @@ i {
 
 li {
     list-style: none;
-}
-
-html {
-    font-size: ($vw_fontsize / ($vw_design / 2)) * 100vw;
-    @media screen and (max-width: $mobile_sm) {
-        font-size: $mobile_sm_fz;
-    }
-    @media screen and (max-width: $mobile_md) {
-        font-size: $mobile_md_fz;
-    }
 }
 
 // input[type="checkbox"] {

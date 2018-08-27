@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+// mod_header
+.mod_header {
+    height: rem(90);
+    background-color: $gray;
+}
+
+// mod_sticky
+.mod_sticky {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    height: 100vh;
+    font-size: rem($fz_xs);
+    &_cont {
+        flex: 1 1 auto;
+    }
+    &_foot {}
+}
