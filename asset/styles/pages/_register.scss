@@ -1,9 +1,46 @@
 @charset 'utf-8';
 
+@mixin scale_border($direction) {
+    position: relative;
+    &:after {
+        content: '';
+        height: 1px;
+        background-color: $gray;
+        position: absolute;
+        left: 0;
+        right: 0;
+        // 判断方向
+        @if $direction == "top" {
+            top: 0;
+        } @else if $direction == "bottom" {
+            bottom: 0;
+        } @else {
+            top: 0;
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            transform: scaleY(0.5);
+            transform-origin: 50% 0;
+        }
+    }
+}
+
 // mod_header
 .mod_header {
+    display: grid;
+    grid-template-columns: rem(90) 1fr rem(90); 
+    // grid-auto-rows: rem(90);
+    // align-items: center;
+    // justify-items: center;
     height: rem(90);
     background-color: $gray;
+    @include scale_border("bottom");
+    .left,
+    .mid,
+    .right {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
 }
 
 // mod_sticky
