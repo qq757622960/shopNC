@@ -19,19 +19,62 @@
     <div class="mod_sticky">
         <div class="mod_sticky_cont">
             <div class="mod_header">
-                <div class="left">left</div>
-                <div class="mid">mid</div>
-                <div class="right">right</div>
+                <div class="left">
+                    <a href="./index.html">
+                        <i class="iconfont icon-home"></i>
+                    </a>
+                </div>
+                <div class="mid">会员注册</div>
+                <div class="right">
+                    <a href="./login.html">登录</a>
+                </div>
             </div>
-            <div class="mod_link_nav">nav</div>
-            <div class="mod_form">
-                form
-                <!-- <div class="mod_form_item">
-                    <label class="mod_lable"></label>
-                    <div class="mod_form_cont">
-                        <input class="mod_input" type="text" />
+            <div class="mod_link_nav">
+                <a class="active" href="./register.html">
+                    <span>
+                        <i class="iconfont icon-mine"></i>
+                        普通注册
+                    </span>
+                </a>
+                <a href="./register_mobile.html">
+                    <span>
+                        <i class="iconfont icon-shumashouji"></i>
+                        手机注册
+                    </span>
+                </a>
+            </div>
+            <div class="register_form">
+                <div class="mod_form">
+                    <div class="mod_form_item">
+                        <label class="mod_lable">用户名</label>
+                        <input class="mod_input" type="text" placeholder="请输入6-20个字符" />
+                        <i class="mod_del iconfont icon-guanbi"></i>
                     </div>
-                </div> -->
+                    <div class="mod_form_item">
+                        <label class="mod_lable">设置密码</label>
+                        <input class="mod_input" type="text" placeholder="请输入6-20位密码" />
+                        <i class="mod_del iconfont icon-guanbi"></i>
+                    </div>
+                    <div class="mod_form_item">
+                        <label class="mod_lable">确认密码</label>
+                        <input class="mod_input" type="text" placeholder="请再次输入密码" />
+                        <i class="mod_del iconfont icon-guanbi"></i>
+                    </div>
+                    <div class="mod_form_item">
+                        <label class="mod_lable">邮箱</label>
+                        <input class="mod_input" type="text" placeholder="请输入常用邮箱地址" />
+                        <i class="mod_del iconfont icon-guanbi"></i>
+                    </div>
+                </div>
+                <div class="register_protocol">
+                    <label class="agree" for="agree">
+                        <input type="checkbox" id="agree" /> 同意协议
+                    </label>
+                    <a href="./protocol.html" class="protocol">用户注册协议</a>
+                </div>
+                <div class="register_btn">
+                    <button disabled class="btn">注册</button>
+                </div>
             </div>
         </div>
         <div class="mod_sticky_foot">

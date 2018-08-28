@@ -1,5 +1,4 @@
 @charset 'utf-8';
-
 @mixin scale_border($direction) {
     position: relative;
     &:after {
@@ -8,13 +7,14 @@
         background-color: $gray;
         position: absolute;
         left: 0;
-        right: 0;
-        // 判断方向
-        @if $direction == "top" {
+        right: 0; // 判断方向
+        @if $direction=="top" {
             top: 0;
-        } @else if $direction == "bottom" {
-            bottom: 0;
-        } @else {
+        }
+        @else if $direction=="bottom" {
+            bottom: -1px;
+        }
+        @else {
             top: 0;
         }
         @media only screen and (-webkit-min-device-pixel-ratio: 2) {
@@ -24,13 +24,126 @@
     }
 }
 
+// 注册表单
+.register_protocol {
+    display: inline-flex;
+    align-items: center;
+    margin-left: rem(20);
+    padding: rem(30) rem(20);
+    font-size: rem($fz_sm);
+    .agree {
+        margin-right: rem(10);
+        input {
+            margin-right: rem(5);
+        }
+    }
+    .protocol {
+        color: $blue;
+    }
+}
+
+.register_btn {
+    width: 90%;
+    margin: rem(30) auto 0;
+    .btn {
+        width: 100%;
+        height: rem(80);
+        background-color: $red;
+        border: none;
+        border-radius: rem(8);
+        font-size: rem($fz_lg);
+        color: $white;
+    }
+    .btn[disabled] {
+        background-color: $gray;
+        color: $black3;
+    }
+}
+
+// copyright
+.mod_copyright {
+    padding: rem(20);
+    text-align: center;
+    p {
+        display: inline-block;
+        text-align: left;
+        text-shadow: 1px 1px 0px rgb(255, 255, 255);
+    }
+}
+
+// form
+.mod_form {
+    background-color: $white;
+    &_item {
+        display: flex;
+        align-items: center;
+        margin-left: rem(20);
+        padding: rem(28) rem(10);
+        font-size: rem($fz_sm);
+        @include scale_border('bottom');
+        &:nth-last-child(-n+1) {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .mod_lable {
+        width: rem(150);
+        text-align: left;
+    }
+    .mod_input {
+        flex: 1;
+        font-size: rem($fz_sm);
+        padding: rem(10) rem(50) rem(10) rem(10);
+        border: none;
+    }
+    .mod_del {
+        position: relative;
+        color: $black3;
+        display: none;
+        &::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            left: -10px;
+        }
+    }
+}
+
+// 导航
+.mod_link_nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    height: rem(90);
+    background-color: $white;
+    margin-bottom: rem(15);
+    @include scale_border("bottom");
+    a {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        height: 100%;
+        border-bottom: 1px solid transparent;
+        font-size: rem($fz_sm);
+        color: $black3;
+        .iconfont {
+            vertical-align: middle;
+        }
+        &.active {
+            border-bottom: 2px solid $red;
+            color: $red;
+        }
+    }
+}
+
 // mod_header
 .mod_header {
     display: grid;
-    grid-template-columns: rem(90) 1fr rem(90); 
-    // grid-auto-rows: rem(90);
-    // align-items: center;
-    // justify-items: center;
+    grid-template-columns: rem(90) 1fr rem(90);
     height: rem(90);
     background-color: $gray;
     @include scale_border("bottom");
@@ -40,6 +153,24 @@
         display: grid;
         align-items: center;
         justify-items: center;
+        color: $black3;
+    }
+    .left {
+        a {
+            color: $black3;
+        }
+    }
+    .mid {
+        font-size: rem($fz_lg);
+    }
+    .right {
+        a {
+            font-size: rem($fz_md);
+            color: $red;
+        }
+    }
+    .iconfont {
+        font-size: rem($fz_lg);
     }
 }
 

@@ -29,7 +29,8 @@ input {
 
 a {
   text-decoration: none;
-  -webkit-touch-callout: none; }
+  -webkit-touch-callout: none;
+  color: #4c4c4c; }
 
 body,
 div,
@@ -155,6 +156,31 @@ i {
 
 li {
   list-style: none; }
+
+input[type="checkbox"] {
+  position: relative;
+  width: 0.2133333333rem;
+  height: 0.2133333333rem;
+  background-color: #F5F5F5;
+  border: 1px solid #CCC;
+  border-radius: 50%;
+  vertical-align: middle; }
+
+input[type="checkbox"]:checked {
+  border-color: #ED5564;
+  background-color: #ED5564; }
+
+input[type="checkbox"]:checked:after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 8px;
+  height: 5px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
 
 @font-face {
   font-family: "iconfont";
