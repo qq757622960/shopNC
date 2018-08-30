@@ -1188,14 +1188,14 @@ src: url("iconfont.eot?t=1535340915460#iefix") format("embedded-opentype"), url(
 
 .icon-shenghuojia:before { content: "\e833"; }
 
-.register_protocol { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-left: 0.1333333333rem; padding: 0.2rem 0.1333333333rem; font-size: 0.1866666667rem; }
+.register_protocol { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-left: 0.1333333333rem; margin-top: 0.1333333333rem; padding: 0.2rem 0.1333333333rem; font-size: 0.1866666667rem; }
 .register_protocol .agree { margin-right: 0.0666666667rem; }
 .register_protocol .agree input { margin-right: 0.0333333333rem; }
 .register_protocol .protocol { color: #508de5; }
 
 .register_btn { width: 90%; margin: 0.2rem auto 0; }
-.register_btn .btn { width: 100%; height: 0.5333333333rem; background-color: #f65365; border: none; border-radius: 0.0533333333rem; font-size: 0.24rem; color: #ffffff; }
-.register_btn .btn[disabled] { background-color: #eeeeee; color: #4c4c4c; }
+.register_btn .btn { width: 100%; height: 0.5333333333rem; background: -webkit-gradient(linear, left top, right top, from(#f16a77), to(#e23d4d)); background: linear-gradient(left, #f16a77, #e23d4d); border: none; border-radius: 0.0533333333rem; font-size: 0.24rem; color: #ffffff; }
+.register_btn .btn[disabled] { background: #eeeeee; color: #4c4c4c; }
 
 .mod_copyright { padding: 0.1333333333rem; text-align: center; }
 .mod_copyright p { display: inline-block; text-align: left; text-shadow: 1px 1px 0px white; }
@@ -1207,7 +1207,7 @@ src: url("iconfont.eot?t=1535340915460#iefix") format("embedded-opentype"), url(
 .mod_form_item:nth-last-child(-n+1):after { display: none; }
 .mod_form .mod_lable { width: 1rem; text-align: left; }
 .mod_form .mod_input { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; font-size: 0.1866666667rem; padding: 0.0666666667rem 0.3333333333rem 0.0666666667rem 0.0666666667rem; border: none; }
-.mod_form .mod_del { position: relative; color: #4c4c4c; display: none; }
+.mod_form .mod_del { cursor: pointer; color: #4c4c4c; display: none; position: relative; }
 .mod_form .mod_del::after { content: ''; position: absolute; top: -10px; right: -10px; bottom: -10px; left: -10px; }
 
 .mod_link_nav { display: grid; grid-template-columns: 1fr 1fr; -webkit-box-align: center; -ms-flex-align: center; align-items: center; justify-items: center; height: 0.6rem; background-color: #ffffff; margin-bottom: 0.1rem; position: relative; }

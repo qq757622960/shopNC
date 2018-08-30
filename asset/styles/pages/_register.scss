@@ -1,4 +1,6 @@
 @charset 'utf-8';
+
+// 0.5px 边框
 @mixin scale_border($direction) {
     position: relative;
     &:after {
@@ -24,11 +26,25 @@
     }
 }
 
+// 扩大点击区域
+@mixin largen_area($top, $right, $bottom, $left) {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+    }
+}
+
 // 注册表单
 .register_protocol {
     display: inline-flex;
     align-items: center;
     margin-left: rem(20);
+    margin-top: rem(20);
     padding: rem(30) rem(20);
     font-size: rem($fz_sm);
     .agree {
@@ -42,20 +58,21 @@
     }
 }
 
+// 提交按钮
 .register_btn {
     width: 90%;
     margin: rem(30) auto 0;
     .btn {
         width: 100%;
         height: rem(80);
-        background-color: $red;
+        background: linear-gradient(left, #f16a77, #e23d4d);
         border: none;
         border-radius: rem(8);
         font-size: rem($fz_lg);
         color: $white;
     }
     .btn[disabled] {
-        background-color: $gray;
+        background: $gray;
         color: $black3;
     }
 }
@@ -98,17 +115,10 @@
         border: none;
     }
     .mod_del {
-        position: relative;
+        cursor: pointer;
         color: $black3;
         display: none;
-        &::after {
-            content: '';
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            bottom: -10px;
-            left: -10px;
-        }
+        @include largen_area(-10px, -10px, -10px, -10px);
     }
 }
 

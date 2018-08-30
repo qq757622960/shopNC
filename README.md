@@ -5,6 +5,8 @@
  * @Desc:   Record some common problems
  */
 
+* 邮箱正则表达式
+* (\w+\.)*\w+@(\w+\.)+[A-Za-z]+
 
 * sass 目录结构 https://www.w3cplus.com/preprocessor/architecture-sass-project.html
 

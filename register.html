@@ -47,25 +47,25 @@
                 <div class="mod_form">
                     <div class="mod_form_item">
                         <label class="mod_lable">用户名</label>
-                        <input class="mod_input" type="text" placeholder="请输入6-20个字符" />
+                        <input class="mod_input" name="username" type="text" placeholder="请输入6-20个字符" />
                         <i class="mod_del iconfont icon-guanbi"></i>
                     </div>
                     <div class="mod_form_item">
                         <label class="mod_lable">设置密码</label>
-                        <input class="mod_input" type="text" placeholder="请输入6-20位密码" />
+                        <input class="mod_input" name="pwd" type="text" placeholder="请输入6-20位密码" />
                         <i class="mod_del iconfont icon-guanbi"></i>
                     </div>
                     <div class="mod_form_item">
                         <label class="mod_lable">确认密码</label>
-                        <input class="mod_input" type="text" placeholder="请再次输入密码" />
+                        <input class="mod_input" name="confirmPwd" type="text" placeholder="请再次输入密码" />
                         <i class="mod_del iconfont icon-guanbi"></i>
                     </div>
                     <div class="mod_form_item">
                         <label class="mod_lable">邮箱</label>
-                        <input class="mod_input" type="text" placeholder="请输入常用邮箱地址" />
+                        <input class="mod_input" name="email" type="text" placeholder="请输入常用邮箱地址" />
                         <i class="mod_del iconfont icon-guanbi"></i>
                     </div>
-                </div>
+                </div> 
                 <div class="register_protocol">
                     <label class="agree" for="agree">
                         <input type="checkbox" id="agree" /> 同意协议
@@ -87,6 +87,8 @@
     <script src="./asset/scripts/vendor/jquery.js"></script>
     <script src="./asset/scripts/vendor/vue.js"></script>
     <script src="./asset/scripts/vendor/lodash.js"></script>
+    <script src="./asset/scripts/vendor/layer_mobile/layer.js"></script>
+    <script src="./asset/scripts/register.js"></script>
 </body>
 
 </html>
