@@ -11,7 +11,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1" />
-    <title>注册页面</title>
+    <title>手机注册页面</title>
     <link rel="stylesheet" href="./asset/styles/register.min.css" />
 </head>
 
@@ -30,13 +30,13 @@
                 </div>
             </div>
             <div class="mod_link_nav">
-                <a class="active" href="./register.html">
+                <a href="./register.html">
                     <span>
                         <i class="iconfont icon-mine"></i>
                         普通注册
                     </span>
                 </a>
-                <a href="./mobile_register.html">
+                <a class="active" href="./mobile_register.html">
                     <span>
                         <i class="iconfont icon-shumashouji"></i>
                         手机注册
@@ -46,43 +46,54 @@
             <div class="mod_form_box">
                 <div class="mod_form">
                     <div class="mod_form_item">
-                        <label class="mod_lable">用户名</label>
+                        <label class="mod_lable">手机号</label>
                         <div class="mod_cont">
-                            <input class="mod_input" name="username" type="text" placeholder="请输入6-20个字符" />
+                            <input class="mod_input" id="usermobile" name="phoneno" type="tel" maxlength="11" placeholder="请输入手机号" />
                             <i class="mod_del iconfont icon-guanbi"></i>
                         </div>
                     </div>
                     <div class="mod_form_item">
-                        <label class="mod_lable">设置密码</label>
+                        <label class="mod_lable">验证码</label>
                         <div class="mod_cont">
-                            <input class="mod_input" name="pwd" type="text" placeholder="请输入6-20位密码" />
+                            <input class="mod_input" id="captcha" maxlength="4" name="captcha" type="text" placeholder="请输入4位验证码" />
                             <i class="mod_del iconfont icon-guanbi"></i>
+                        </div>
+                        <input type="hidden" id="codekey" />
+                        <a href="javascript:;" id="refreshcode" class="code-img">
+                            <img id="codeimage" src="" alt="" />
+                        </a>
+                    </div>
+                    <div class="mod_form_item">
+                        <label class="mod_lable">短信验证码</label>
+                        <div class="mod_cont">
+                            <input class="mod_input" name="shortcode" id="shortcode" maxlength="4" type="tel" placeholder="请输入短信验证码" />
+                            <i class="mod_del iconfont icon-guanbi"></i>
+                        </div>
+                        <a href="javascript:;" class="send_code" id="again">获取验证码</a>
+                        <div class="count_down">
+                            <p>获取验证码</p>
+                            <p>（等待 <em>60</em> 秒后）</p>
                         </div>
                     </div>
                     <div class="mod_form_item">
-                        <label class="mod_lable">确认密码</label>
+                        <label class="mod_lable">密码</label>
                         <div class="mod_cont">
-                            <input class="mod_input" name="confirmPwd" type="text" placeholder="请再次输入密码"/>
+                            <input class="mod_input" name="password" id="password" type="password" maxlength="20" placeholder="请输入6-20位密码" />
                             <i class="mod_del iconfont icon-guanbi"></i>
-                        </div>
-                    </div>
-                    <div class="mod_form_item">
-                        <label class="mod_lable">邮箱</label>
-                        <div class="mod_cont">
-                            <input class="mod_input" name="email" type="text" placeholder="请输入常用邮箱地址" />
-                            <i class="mod_del iconfont icon-guanbi"></i>
+                            <i class="icon_chakan1 iconfont icon-chakan1"></i>
                         </div>
                     </div>
                 </div>
                 <div class="mod_form_protocol">
                     <label class="agree" for="agree">
-                        <input type="checkbox" id="agree" /> 同意协议
+                        <input type="checkbox" id="agree" />同意协议
                     </label>
                     <a href="./protocol.html" class="protocol">用户注册协议</a>
                 </div>
                 <div class="mod_form_btn">
-                    <button disabled class="btn">注册</button>
+                    <button class="btn">注册</button>
                 </div>
+                <div class="mod_form_notes">绑定手机不收任何费用，一个手机只能绑定一个账号，若需修改或解除已绑定的手机，请登录商城PC端进行操作。</div>
             </div>
         </div>
         <div class="mod_sticky_foot">
@@ -97,7 +108,9 @@
     <script src="./asset/scripts/vendor/lodash.js"></script>
     <script src="./asset/scripts/fetch.js"></script>
     <script src="./asset/scripts/vendor/layer_mobile/layer.js"></script>
-    <script src="./asset/scripts/register.js"></script>
+    <script src="./asset/scripts/config.js"></script>
+    <script src="./asset/scripts/common.js"></script>
+    <script src="./asset/scripts/mobile_register.js"></script>
 </body>
 
 </html>

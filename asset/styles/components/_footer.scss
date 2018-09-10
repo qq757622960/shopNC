@@ -1,0 +1,59 @@
+@charset 'utf-8';
+/* Moudle Footer
+----------------------------------------------------- */
+
+.mod {
+    &_footer {
+        margin-top: rem(20);
+        background-color: $white;
+        font-size: rem($fz_sm);
+        color: $black;
+        &_navtxt {
+            height: rem(80);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include scale_border('bottom');
+            &_item {
+                text-align: center;
+                flex: 1;
+                border-right: 1px solid #ddd;
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+        &_navpic {
+            padding: rem(10) 0; 
+            &_inner {
+                width: 60%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            @include scale_border('bottom');
+            &_item {
+                flex: 1;
+                text-align: center;
+                img {
+                    padding: rem(10);
+                    opacity: .6;
+                    width: rem(70);
+                    height: rem(70);
+                    border: 1px solid #ddd;
+                    border-radius: 50%;
+                }
+                p {
+                    font-size: rem($fz_xs);
+                    padding-top: rem(5);
+                }
+            }
+        }
+        &_copyright {
+            padding: rem(30) 0;
+            text-align: center;
+            font-size: rem($fz_xs);
+        }
+    }
+}

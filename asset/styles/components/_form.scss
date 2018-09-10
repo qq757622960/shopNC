@@ -1,0 +1,108 @@
+@charset 'utf-8';
+// form
+.mod_form {
+    &_box {}
+    background-color: $white;
+    &_item {
+        display: flex;
+        align-items: center;
+        margin-left: rem(20);
+        padding: rem(28) rem(10);
+        font-size: rem($fz_sm);
+        @include scale_border('bottom');
+        &:nth-last-child(-n+1) {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .mod_lable {
+        width: rem(150);
+        text-align: left;
+    }
+    .mod_cont {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+    .mod_input {
+        flex: 1;
+        font-size: rem($fz_sm);
+        padding: rem(10) rem(50) rem(10) rem(10);
+        border: none;
+    }
+    .mod_del {
+        cursor: pointer;
+        color: $black3;
+        display: none;
+        padding-right: 5px;
+        left: -10px;
+        @include largen_area(-5px, -5px, -5px, -5px);
+    }
+    .icon_chakan1 {
+        color: #999;
+        font-size: 18px;
+        padding-right: 5px;
+        cursor: pointer;
+        @include largen_area(-5px, -5px, -5px, -5px);
+        &.active {
+            color: $black;
+        }
+    }
+    .send_code {
+        color: $blue;
+        font-size: rem($fz_sm);
+    }
+    .count_down {
+        display: none;
+        text-align: center;
+        p:first-child {
+            margin-bottom: 5px;
+        }
+        em {
+            color: $red;
+        }
+    }
+    &_protocol {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: rem(20);
+        margin-top: rem(20);
+        padding: rem(30) rem(20);
+        font-size: rem($fz_sm);
+        .agree {
+            margin-right: rem(10);
+            input {
+                margin-right: rem(5);
+            }
+        }
+        .protocol {
+            color: $blue;
+        }
+    }
+    &_notes {
+        color: $black2;
+        line-height: 1.5;
+        font-size: rem(24);
+        width: 90%;
+        margin: rem(40) auto 0;
+    }
+    &_btn {
+        width: 90%;
+        margin: rem(30) auto 0;
+        .btn {
+            width: 100%;
+            height: rem(80);
+            background: linear-gradient(left, #f16a77, #e23d4d);
+            border: none;
+            border-radius: rem(8);
+            font-size: rem($fz_lg);
+            color: $white;
+        }
+        .btn[disabled] {
+            background: $gray;
+            color: $black3;
+        }
+    }
+}

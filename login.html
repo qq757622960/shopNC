@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1" />
+    <title>登录</title>
+    <link rel="stylesheet" href="./asset/styles/login.min.css" />
+</head>
+
+<body>
+    <div class="mod_sticky">
+        <div class="mod_sticky_cont">
+            <div class="mod_header">
+                <div class="left">
+                    <a href="./index.html">
+                        <i class="iconfont icon-home"></i>
+                    </a>
+                </div>
+                <div class="mid">登录</div>
+                <div class="right">
+                    <a href="./register.html">注册</a>
+                </div>
+            </div>
+            <div class="mod_form_box">
+                <div class="mod_form">
+                    <div class="mod_form_item">
+                        <label class="mod_lable">账户</label>
+                        <div class="mod_cont">
+                            <input class="mod_input" id="usermobile" name="phoneno" type="tel" placeholder="请输入用户名/已验证手机" />
+                            <i class="mod_del iconfont icon-guanbi"></i>
+                        </div>
+                    </div>
+                    <div class="mod_form_item">
+                        <label class="mod_lable">密码</label>
+                        <div class="mod_cont">
+                            <input class="mod_input" id="password" maxlength="20" name="password" type="text" placeholder="请输入登录密码" />
+                            <i class="mod_del iconfont icon-guanbi"></i>
+                        </div>
+                        <input type="hidden" id="codekey" />
+                    </div>
+                </div>
+                <div class="mod_form_protocol">
+                    <label class="agree" for="agree">
+                        <input type="checkbox" id="agree" />七天自动登录
+                    </label>
+                    <a class="protocol">忘记密码?</a>
+                </div>
+                <div class="mod_form_btn">
+                    <button disabled="disabled" class="form_btn btn">登录</button>
+                </div>
+            </div>
+        </div>
+        <div class="mod_sticky_foot">
+            <div class="mod_copyright">
+                <p>Copyright@2007-2018网城科技ShopNC.net版权所有</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./asset/scripts/vendor/jquery.js"></script>
+    <script src="./asset/scripts/vendor/vue.js"></script>
+    <script src="./asset/scripts/vendor/lodash.js"></script>
+    <script src="./asset/scripts/fetch.js"></script>
+    <script src="./asset/scripts/vendor/layer_mobile/layer.js"></script>
+    <script src="./asset/scripts/config.js"></script>
+    <script src="./asset/scripts/common.js"></script>
+    <script src="./asset/scripts/login.js"></script>
+</body>
+
+</html>

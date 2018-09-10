@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+.mod_badge {
+    position: relative;
+    display: inline-block;
+    padding: 0 6px;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    background-color: $red;
+    color: #fff;
+    border-radius: 2px;
+}

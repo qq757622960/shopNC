@@ -33,7 +33,7 @@ $(function() {
     // 激活注册按钮
     function activeRegister() {
         var is_null = false;
-        var register_btn = $('.register_btn button');
+        var register_btn = $('.mod_form_btn button');
         var agree = $('#agree');
 
         // 每输入一次值, 要检测这几个输入框是否有值, 判断是否要激活提交按钮
@@ -48,7 +48,7 @@ $(function() {
         // disabled: true  是禁用状态
         // disabled: false 是激活状态
         // checkbox: true 是选中状态
-    // checkbox: false 是未选中
+        // checkbox: false 是未选中
         register_btn.prop('disabled', !(is_null && agree.prop('checked')));
     }
 
@@ -62,7 +62,7 @@ $(function() {
     }
 
     // 注册
-    $('.register_btn button').on('click', function() {
+    $('.mod_form_btn button').on('click', function() {
         var username = $('.mod_input[name="username"]').val().trim(),
             pwd = $('.mod_input[name="pwd"]').val().trim(),
             confirmPwd = $('.mod_input[name="confirmPwd"]').val().trim(),
@@ -73,13 +73,6 @@ $(function() {
             num_re = /\d{6,20}/g,
             email_re = /(\w+\.)*\w+@(\w+\.)+[A-Za-z]/g;
         
-        // if (!word_re.test(username)) {
-        //     openLayer('请输入6-20位字符');
-        //     return;
-        // }
-        // if (!num_re.test(username)) {
-        //     openLayer('用户名不能为纯数字');
-        // }
         if (!word_re.test(pwd)) {
             openLayer('请输入6-20位密码');
             return;
@@ -92,7 +85,7 @@ $(function() {
             openLayer('请输入正确的电子邮箱');
             return;
         }
-        
+
         $.ajax({
             type: "post",
             url: "http://b2b2c.shopnctest.com/dema/mo_bile/index.php?act=login&op=register",

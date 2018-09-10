@@ -9,9 +9,16 @@
 @import './base/_reset';
 
 // ICONFONT
-@import '../icons/iconfont'
+@import '../icons/iconfont';
 
 // COMPONENTS
+@import './components/copyright';
+@import './components/form';  
+@import './components/header';  
+@import './components/sticky';  
+@import './components/badge';  
+@import './components/card';  
+@import './components/footer';  
 // LAYOUT
 // PAGES
 // THEMES

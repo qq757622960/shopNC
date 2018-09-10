@@ -1,0 +1,72 @@
+@charset 'utf-8';
+// mod_header
+.mod_header {
+    @include scale_border("bottom");
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    z-index: 8;
+    display: grid;
+    grid-template-columns: rem(90) 1fr rem(90);
+    height: rem(90);
+    background-color: $gray;
+    &.trans {
+        background-color: transparent;
+        &:after {
+            display: none;
+        }
+        .left,
+        .mid,
+        .right {
+            color: $white;
+        }
+        .left,
+        .right {
+            a {
+                color: $white;
+            }
+        }
+        .mid {
+            font-size: 0;
+        }
+        .icon-shezhi,
+        .icon-gengduo {
+            color: $white;
+        }
+    }
+    &.fixed {
+        position: fixed;
+    }
+    .left,
+    .mid,
+    .right {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        color: $black3;
+    }
+    .left {
+        a {
+            color: $black3;
+        }
+    }
+    .mid {
+        font-size: rem($fz_lg);
+    }
+    .right {
+        a {
+            font-size: rem($fz_md);
+            color: $red;
+        }
+    }
+    .iconfont {
+        font-size: rem($fz_lg);
+    }
+    .icon-shezhi,
+    .icon-gengduo {
+        font-size: rem(48);
+        color: $black;
+    }
+}

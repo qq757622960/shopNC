@@ -685,3 +685,36 @@ input[type=checkbox]:checked:after{content:'';position:absolute;left:3px;top:3px
 .mod_footer_navpic_item img{padding:.0666666667rem;opacity:.6;width:.4666666667rem;height:.4666666667rem;border:1px solid #ddd;border-radius:50%}
 .mod_footer_navpic_item p{font-size:.16rem;padding-top:.0333333333rem}
 .mod_footer_copyright{padding:.2rem 0;text-align:center;font-size:.16rem}
+.member_uinfo{position:relative;height:3.3333333333rem;width:100%;margin-bottom:.1333333333rem;background-color:#f65365;background-position:0 0;background-repeat:no-repeat;background-size:cover;-webkit-animation:changeBg 20s infinite;animation:changeBg 20s infinite}
+.member_uinfo_box{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;padding-top:.6rem;padding-bottom:.3333333333rem}
+.member_uinfo_avatar{width:1.24rem;height:1.24rem}
+.member_uinfo_avatar img{max-width:100%;height:100%;border-radius:50%}
+.member_uinfo_name{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:.0333333333rem;font-size:.2rem;line-height:1.5;color:#fff}
+.member_uinfo_name .mod_badge{margin-left:.0333333333rem}
+.member_collect{position:absolute;right:0;bottom:0;left:0;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:.9066666667rem;-webkit-box-align:center;-ms-flex-align:center;align-items:center;justify-items:center;background-color:rgba(0,0,0,.3);font-size:.2rem;text-align:center}
+.member_collect p{color:#fff}
+.member_collect p:first-child{margin-bottom:.0666666667rem}
+@-webkit-keyframes changeBg{
+0%{background-color:#ed5564}
+10%{background-color:#fb6e52}
+20%{background-color:#ffce55}
+30%{background-color:#a0d468}
+40%{background-color:#48cfae}
+50%{background-color:#4fc0e8}
+60%{background-color:#5d9cec}
+70%{background-color:#ac92ed}
+80%{background-color:#ec87bf}
+90%{background-color:#ed5564}
+}
+@keyframes changeBg{
+0%{background-color:#ed5564}
+10%{background-color:#fb6e52}
+20%{background-color:#ffce55}
+30%{background-color:#a0d468}
+40%{background-color:#48cfae}
+50%{background-color:#4fc0e8}
+60%{background-color:#5d9cec}
+70%{background-color:#ac92ed}
+80%{background-color:#ec87bf}
+90%{background-color:#ed5564}
+}

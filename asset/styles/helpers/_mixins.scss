@@ -1,0 +1,58 @@
+@charset 'utf-8';
+
+/* Mixin
+----------------------------------------------------- */
+
+// 箭头图标
+@mixin arrow {
+    position: relative;
+    &:after {
+        content: '';
+        display: inline-block;
+        width: rem(15);
+        height: rem(15);
+        border-width: 0 1px 1px 0;
+        border-style: solid;
+        border-color: #ddd;
+        transform: rotate(-45deg);
+    }
+}
+
+// 0.5px 边框
+@mixin scale_border($direction) {
+    position: relative;
+    &:after {
+        content: '';
+        height: 1px;
+        background-color: $gray;
+        position: absolute;
+        left: 0;
+        right: 0; // 判断方向
+        @if $direction=="top" {
+            top: 0;
+        }
+        @else if $direction=="bottom" {
+            bottom: -1px;
+        }
+        @else {
+            top: 0;
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            transform: scaleY(0.5);
+            transform-origin: 50% 0;
+        }
+    }
+}
+
+// 扩大点击区域
+@mixin largen_area($top, $right, $bottom, $left) {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+    }
+}

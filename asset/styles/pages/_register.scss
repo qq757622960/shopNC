@@ -1,44 +1,5 @@
 @charset 'utf-8';
 
-// 0.5px 边框
-@mixin scale_border($direction) {
-    position: relative;
-    &:after {
-        content: '';
-        height: 1px;
-        background-color: $gray;
-        position: absolute;
-        left: 0;
-        right: 0; // 判断方向
-        @if $direction=="top" {
-            top: 0;
-        }
-        @else if $direction=="bottom" {
-            bottom: -1px;
-        }
-        @else {
-            top: 0;
-        }
-        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-            transform: scaleY(0.5);
-            transform-origin: 50% 0;
-        }
-    }
-}
-
-// 扩大点击区域
-@mixin largen_area($top, $right, $bottom, $left) {
-    position: relative;
-    &::after {
-        content: '';
-        position: absolute;
-        top: $top;
-        right: $right;
-        bottom: $bottom;
-        left: $left;
-    }
-}
-
 // 注册表单
 .register_protocol {
     display: inline-flex;
@@ -58,6 +19,15 @@
     }
 }
 
+// 注册提示
+.register_notes {
+    color: $black2;
+    line-height: 1.5;
+    font-size: rem(24);
+    width: 90%;
+    margin: rem(40) auto 0;
+}
+
 // 提交按钮
 .register_btn {
     width: 90%;
@@ -74,51 +44,6 @@
     .btn[disabled] {
         background: $gray;
         color: $black3;
-    }
-}
-
-// copyright
-.mod_copyright {
-    padding: rem(20);
-    text-align: center;
-    p {
-        display: inline-block;
-        text-align: left;
-        text-shadow: 1px 1px 0px rgb(255, 255, 255);
-    }
-}
-
-// form
-.mod_form {
-    background-color: $white;
-    &_item {
-        display: flex;
-        align-items: center;
-        margin-left: rem(20);
-        padding: rem(28) rem(10);
-        font-size: rem($fz_sm);
-        @include scale_border('bottom');
-        &:nth-last-child(-n+1) {
-            &:after {
-                display: none;
-            }
-        }
-    }
-    .mod_lable {
-        width: rem(150);
-        text-align: left;
-    }
-    .mod_input {
-        flex: 1;
-        font-size: rem($fz_sm);
-        padding: rem(10) rem(50) rem(10) rem(10);
-        border: none;
-    }
-    .mod_del {
-        cursor: pointer;
-        color: $black3;
-        display: none;
-        @include largen_area(-10px, -10px, -10px, -10px);
     }
 }
 
@@ -148,51 +73,4 @@
             color: $red;
         }
     }
-}
-
-// mod_header
-.mod_header {
-    display: grid;
-    grid-template-columns: rem(90) 1fr rem(90);
-    height: rem(90);
-    background-color: $gray;
-    @include scale_border("bottom");
-    .left,
-    .mid,
-    .right {
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        color: $black3;
-    }
-    .left {
-        a {
-            color: $black3;
-        }
-    }
-    .mid {
-        font-size: rem($fz_lg);
-    }
-    .right {
-        a {
-            font-size: rem($fz_md);
-            color: $red;
-        }
-    }
-    .iconfont {
-        font-size: rem($fz_lg);
-    }
-}
-
-// mod_sticky
-.mod_sticky {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    height: 100vh;
-    font-size: rem($fz_xs);
-    &_cont {
-        flex: 1 1 auto;
-    }
-    &_foot {}
 }

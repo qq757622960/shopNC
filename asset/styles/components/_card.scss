@@ -1,0 +1,67 @@
+@charset 'utf-8';
+ 
+/* Moudle Card
+----------------------------------------------------- */
+.mod {
+    &_card {
+        background-color: $white;
+        margin-bottom: rem($mb_md);
+        @include scale_border('bottom');
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &_header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: rem(25);
+            padding-right: rem(25);
+            height: rem(90);
+            @include scale_border('bottom');
+            &_l {
+                .mchl_title {
+                    font-size: rem($fz_md);
+                    color: $black;
+                    img {
+                        width: rem(30);
+                        height: rem(30);
+                    }
+                }
+            }
+            &_r {
+                .mchr_more {
+                    display: inline-flex;
+                    align-items: center;
+                    color: $gray3;
+                    font-size: rem($fz_sm);
+                    @include arrow;
+                }
+            }
+        }
+        &_content {
+            padding: rem(30) 0;
+            &_list {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                align-items: center;
+                justify-items: center;
+                .mccl_item {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    img {
+                        width: rem(42);
+                        height: rem(42);
+                        opacity: .6;
+                    }
+                    p {
+                        padding-top: rem(15);
+                        font-size: rem($fz_sm);
+                        color: #888;
+                    }
+                }
+            }
+        }
+        &_footer {}
+    }
+}
