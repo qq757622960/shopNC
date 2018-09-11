@@ -1,5 +1,7 @@
 @charset 'utf-8';
-// mod_header
+/* Moudle header
+----------------------------------------------------- */
+
 .mod_header {
     @include scale_border("bottom");
     position: absolute;
@@ -68,5 +70,37 @@
     .icon-gengduo {
         font-size: rem(48);
         color: $black;
+    }
+}
+
+/* Moudle nav_menu
+----------------------------------------------------- */
+
+.mod_nav_menu {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    width: rem(240);
+    border-radius: rem(10);
+    background-color: rgba(85, 85, 85, 0.55);
+    &:after {
+        content: '';
+        position: absolute;
+        top: -11px;
+        right: 5px;
+        @include triangle('top', rem(20), rgba(85, 85, 85, 0.55));
+    }
+    li {
+        padding: rem(20) 0 rem(20) rem(20);
+        color: $white;
+        &:not(:last-child) {
+            @include scale_border('bottom');
+        }
+        a {
+            font-size: rem($fz_md);
+            color: $white;
+            .iconfont {}
+        }
     }
 }

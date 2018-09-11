@@ -209,3 +209,6 @@ input[type="checkbox"]:checked:after {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
+
+.hide { display: none !important; }
+.show { display: block !important; }

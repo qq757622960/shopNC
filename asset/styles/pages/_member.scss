@@ -1,4 +1,7 @@
 @charset 'utf-8';
+
+/* Moudle member
+----------------------------------------------------- */
 .member {
     &_uinfo {
         position: relative;
@@ -11,12 +14,17 @@
         background-size: cover;
         animation: changeBg 20s infinite;
         &_box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding-top: rem(90);
-            padding-bottom: rem(50);
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -35%); 
+            animation: memberInfoDown 1000ms ease-in;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            // flex-direction: column;
+            // padding-top: rem(90);
+            // padding-bottom: rem(50);
         }
         &_avatar {
             width: rem(186);
@@ -60,6 +68,28 @@
         }
     }
     &_ainfo {}
+}
+
+// memberInfoDown
+@keyframes memberInfoDown {
+    0% {
+        top: -50%;
+    }
+    30% {
+        top: -10%;
+    }
+    75% {
+        top: 40%;
+    }
+    85% {
+        top: 32%;
+    }
+    95% {
+        top: 37%;
+    }
+    100% {
+        top: 35%;
+    }
 }
 
 // Animation

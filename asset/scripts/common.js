@@ -42,3 +42,29 @@ loadSeccode()
     .catch(function(error) {
         console.log(error);
     });
+
+// 回到顶部
+$('.gotop').on('click', function (e) {
+    var that = this;
+    that.timer = setInterval(function () {
+        $(window).scrollTop(Math.floor($(window).scrollTop() * 0.8));
+        if ($(window).scrollTop() == 0) { clearInterval(that.timer); }
+    }, 10);
+});
+
+// 右上侧小导航控件
+$('.mod_header').on('click', '.icon-gengduo', function() {
+    $('.mod_nav_menu').toggleClass('show');
+});
+
+$('.mod_nav_menu').on('click', 'li', function() {
+    $('.mod_nav_menu').removeClass('show');
+});
+
+$(document).scroll(function() {
+    $('.mod_nav_menu').removeClass('show');
+});
+
+
+
+
