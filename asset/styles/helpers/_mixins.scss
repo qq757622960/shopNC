@@ -85,3 +85,45 @@
         left: $left;
     }
 }
+
+// 单行省略
+@mixin ell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// 多行省略
+@mixin lineclamp($line) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
+// 定宽不定宽高居中
+@mixin center($width: null, $height: null) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @if $width and $height {
+        width: $width;
+        height: $height;
+        margin-left: -($width / 2);
+        margin-top: -($height / 2);
+    }
+    @else if not $width and not $height {
+        transform: translate(-50%, -50%);
+    }
+    @else if not $height {
+        width: $width;
+        margin-left: -($width / 2);
+        transform: translate(0, -50%);
+    }
+    @else {
+        height: $height;
+        margin-top: -($height / 2);
+        transform: translate(-50%, 0);
+    }
+}

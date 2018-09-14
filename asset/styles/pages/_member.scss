@@ -1,7 +1,7 @@
 @charset 'utf-8';
-
 /* Moudle member
 ----------------------------------------------------- */
+
 .member {
     &_uinfo {
         position: relative;
@@ -17,14 +17,8 @@
             position: absolute;
             top: 35%;
             left: 50%;
-            transform: translate(-50%, -35%); 
+            transform: translate(-50%, -35%);
             animation: memberInfoDown 1000ms ease-in;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;
-            // flex-direction: column;
-            // padding-top: rem(90);
-            // padding-bottom: rem(50);
         }
         &_avatar {
             width: rem(186);
@@ -60,11 +54,25 @@
         background-color: rgba(0, 0, 0, .3);
         font-size: rem(30);
         text-align: center;
+        &_item {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
         p {
             color: $white;
         }
-        p:first-child {
-            margin-bottom: rem(10);
+        p:first-child,
+        .icon-31zuji {
+            width: rem(50);
+            height: rem(50); 
+            // margin-bottom: rem(10);
+        }
+        .icon-31zuji {
+            color: $white;
+            font-size: rem($fz_lg);
         }
     }
     &_ainfo {}

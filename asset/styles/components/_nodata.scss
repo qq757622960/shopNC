@@ -1,0 +1,46 @@
+@charset 'utf-8';
+
+/* Moudle No Data
+----------------------------------------------------- */
+
+.mod {
+    &_nodata {
+        width: rem(500);
+        height: rem(405);
+        text-align: center;
+        @include center;
+        &_img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 10px;
+            width: rem(140);
+            height: rem(140);
+            background-color: $gray4;
+            border-radius: 100%;
+            img {
+                width: 80%;
+                height: 80%;
+                object-fit: cover;
+            }
+        }
+        &_tips {
+            margin: rem(40) 0;
+            dt {
+                font-size: rem($fz_lg);
+                color: $black;
+            }
+            dd {
+                margin-top: rem(28);
+                font-size: rem($fz_xs);
+                color: $gray3;
+            }
+        }
+        a {
+            &:not(:first-child) {
+                margin-left: rem(10);
+            }
+        }
+    }
+}

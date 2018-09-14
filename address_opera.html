@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1" />
+    <link rel="stylesheet" href="./asset/styles/address_list.min.css" />
+    <title>添加地址</title>
+</head>
+
+<body>
+
+    <!-- 添加地址 -->
+    <div class="mod_sticky">
+        <div class="mod_sticky_head">
+            <div class="mod_header">
+                <div class="left">
+                    <a href="./index.html">
+                        <i class="iconfont icon-fanhui1"></i>
+                    </a>
+                </div>
+                <div class="mid">新增收货地址</div>
+                <div class="right">
+                    <i class="iconfont icon-xiugaioryijian"></i>
+                </div>
+            </div>
+        </div>
+        <div class="mod_sticky_cont">
+            <div class="mod_form_box">
+                <div class="mod_form">
+                    <div class="mod_form_item">
+                        <label class="mod_lable">收货人姓名</label>
+                        <div class="mod_cont">
+                            <input class="mod_input" name="" type="text" placeholder="" />
+                            <i class="mod_del iconfont icon-guanbi"></i>
+                        </div>
+                    </div>
+                    <div class="mod_form_item">
+                        <label class="mod_lable">联系手机</label>
+                        <div class="mod_cont">
+                            <input class="mod_input" name="" maxlength="11" type="text" placeholder="" />
+                            <i class="mod_del iconfont icon-guanbi"></i>
+                        </div>
+                    </div> 
+                    <div class="mod_form_item">
+                        <label class="mod_lable">地区选择</label>
+                        <div class="mod_cont">
+                            <input id="area_info" class="mod_input" name="" type="text" placeholder="" disabled />
+                        </div>
+                    </div>
+                    <div class="mod_form_item">
+                        <label class="mod_lable">详细地址</label>
+                        <div class="mod_cont">
+                            <input class="mod_input" name="" type="text" placeholder="" />
+                            <i class="mod_del iconfont icon-guanbi"></i>
+                        </div>
+                    </div>
+                    <div class="mod_form_item">
+                        <label class="mod_lable">默认地址</label>
+                        <div class="mod_cont">
+                            <label>
+                                <input type="checkbox" />
+                                <span class="mod_switch">
+                                    <span class="mod_switch_radius"></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mod_form_btn">
+                    <button disabled class="btn">保存地址</button>
+                </div>
+            </div>
+        </div>
+        <div class="mod_sticky_foot">
+            <div class="mod_copyright">
+                <p>Copyright@2007-2018网城科技ShopNC.net版权所有</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./asset/scripts/vendor/jquery.js"></script>
+    <script src="./asset/scripts/vendor/vue.js"></script>
+    <script src="./asset/scripts/vendor/lodash.js"></script>
+    <script src="./asset/scripts/vendor/layer_mobile/layer.js"></script>
+    <script src="./asset/scripts/config.js"></script>
+    <script src="./asset/scripts/common.js"></script>
+    <script src="./asset/scripts/address_list.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+@charset 'utf-8';
+
+/* Moudle Button
+----------------------------------------------------- */
+
+.mod_btn {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: $green;
+    color: $white;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    
+    // 带边框
+    &.mod_btn_primary {
+        border: 1px solid $gray5;
+        background-color: $white;
+        color: $gray6;
+    }
+    
+    // 小号字体
+    &.mod_btn_xs {
+        height: 22px;
+        line-height: 22px;
+        padding: 0 5px;
+        font-size: 12px;
+    }
+}

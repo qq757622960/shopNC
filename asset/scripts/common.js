@@ -66,5 +66,16 @@ $(document).scroll(function() {
 });
 
 
+// radio 样式
+$('body').on('click', 'label', function() {
+    if ($(this).has("input[type='checkbox']")) {
+        if ($(this).find('input[type="checkbox"]').prop('checked')) {
+            $(this).addClass('checked');
+        } else {
+            $(this).removeClass('checked');
+        }
+    }
+});
+
 
 

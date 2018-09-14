@@ -1,0 +1,51 @@
+@charset 'utf-8';
+
+/* Moudle Switch、Radio、Checkbox
+----------------------------------------------------- */
+
+label {
+    input[type="checkbox"] {
+        display: none;
+    }
+    // 选中状态
+    &.checked {
+        .mod_switch {
+            background-color: $green;
+            border-color: $green;
+            .mod_switch_radius {
+                left: auto;
+                right: 0;
+            }
+        }   
+    }
+}
+
+.mod {
+    &_switch {
+        display: inline-block;
+        position: relative;
+        width: rem(80);
+        height: rem(44);
+        border-radius: rem(40);
+        border: 1px solid $gray4;
+        &_radius {
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: rem(42);
+            height: rem(42);
+            border-radius: 100%;
+            background-color: $white;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+            transition: all .3s;
+        }
+        &.active {
+            background-color: $green;
+            border-color: $green;
+            .mod_switch_radius {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+}
