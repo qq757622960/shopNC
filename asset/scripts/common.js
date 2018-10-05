@@ -1,8 +1,41 @@
 /** 
  * @Author: YISHI 
  * @Date: 2018-09-03 15:50:01 
- * @Desc: 通用JAVASCRIPT 
+ * @Desc: 通用类
  */
+
+;(function($) {
+
+    $.extend($, {
+        // 滚动header固定到顶部
+        scrollTransparent: function (options) {
+            var defaults = {
+                value: '#header',
+                scrollHeight: 50
+            }
+
+            var options = $.extend({}, defaults, options);
+            
+            function _init() {
+                $(window).scroll(function() {
+                    // 如果滚动条的距离 <= 50, 那么, 就让他显示成透明的头部
+                    if ($(window).scrollTop() <= options.scrollHeight) {
+                        $(options.value).addClass('transparent').removeClass('posf');
+                    } else {
+                        // 否则就显示成不透明的头部
+                        $(options.value).addClass('posf').removeClass('transparent');
+                    }
+                });
+            }
+
+            return this.each(function() {
+                _init();
+            });
+        }   
+    });
+    
+})(jQuery);
+
 
 // 加载验证码
 function loadSeccode(params) {
@@ -43,7 +76,17 @@ loadSeccode()
         console.log(error);
     });
 
+
 // 回到顶部
+$(document).scroll(function() {
+    set();
+});
+
+// 判断隐藏显示按钮
+function set() {
+    $('#goTopBtn')[$(window).scrollTop() == 0 ? 'hide' : 'show']();
+}
+
 $('.gotop').on('click', function (e) {
     var that = this;
     that.timer = setInterval(function () {
@@ -51,6 +94,8 @@ $('.gotop').on('click', function (e) {
         if ($(window).scrollTop() == 0) { clearInterval(that.timer); }
     }, 10);
 });
+
+set();
 
 // 右上侧小导航控件
 $('.mod_header').on('click', '.icon-gengduo', function() {

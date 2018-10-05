@@ -1,0 +1,43 @@
+@charset 'utf-8';
+/* Moudle Tabbar
+----------------------------------------------------- */
+
+.mod_footer {
+    margin-bottom: rem(110);
+}
+
+.mod {
+    &_tabbar {
+        position: fixed;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $gray;
+        height: rem(110);
+        background-color: $white;
+        &_item {
+            width: 25%;
+            text-align: center;
+            &.active {
+                span {
+                    color: $red;
+                }
+            }
+            img {
+                width: rem(40);
+                height: rem(40);
+                opacity: .6;
+            }
+            span {
+                display: block;
+                padding-top: rem(10);
+                font-size: rem(24);
+                color: $black;
+            }
+        }
+    }
+}

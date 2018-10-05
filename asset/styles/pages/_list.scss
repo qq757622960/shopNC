@@ -1,0 +1,36 @@
+@charset 'utf-8';
+
+/* Moudle List
+----------------------------------------------------- */
+
+body {
+    background-color: $white;
+}
+
+.mod_list {
+    padding: rem(30) 0;
+    &_item {
+        display: flex;
+        line-height: 1.5;
+        font-size: rem(30);
+        padding-bottom: rem(30);
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    .mli_lab {
+        width: rem(250);
+        color: #999;
+        text-align: right;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .mli_cont {
+        padding: 0 rem(20);
+        flex: 1;
+        color: #333;
+        text-align: justify;
+    }
+}
+

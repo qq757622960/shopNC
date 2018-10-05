@@ -25,7 +25,7 @@
         border-color: transparent transparent transparent $color;
         border-right: none;
     }
-    @else if $direction==left {
+    @else if $direction=='left' {
         border-style: dashed solid dashed dashed;
         border-color: transparent $color transparent transparent;
         border-left: none;
@@ -100,6 +100,13 @@
     display: -webkit-box;
     -webkit-line-clamp: $line;
     -webkit-box-orient: vertical;
+}
+
+// flex 方式居中
+@mixin flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 // 定宽不定宽高居中

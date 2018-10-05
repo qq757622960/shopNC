@@ -3,3 +3,61 @@
 /* Moudle Address
 ----------------------------------------------------- */
 
+.mod_address {
+    &_nav {
+        @include scale_border('bottom');
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        height: rem(90);
+        background-color: $white;
+        &_item {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+                line-height: rem(80);
+                border-bottom: 2px solid transparent;
+            }
+            &.active {
+                a {
+                    border-color: $red;
+                    color: $red;
+                }
+            }
+        }
+    }
+    &_list {
+        background-color: $white;
+        padding-left: rem(20);
+        
+    }
+    &_item {
+        position: relative;
+        height: rem(90);
+        line-height: rem(90);
+        font-size: rem(30);
+        color: $black;
+        @include scale_border('bottom');
+        a {
+            padding-right: rem(20);
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+// 地区主体内容
+.mod_nav_main {
+    position: absolute;
+    top: rem(200);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+}
+

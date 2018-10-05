@@ -1254,6 +1254,26 @@ src: url("iconfont.eot?t=1535340915460#iefix") format("embedded-opentype"), url(
 @media only screen and (-webkit-min-device-pixel-ratio: 2) { .mod_nav_menu li:not(:last-child):after { -webkit-transform: scaleY(0.5); transform: scaleY(0.5); -webkit-transform-origin: 50% 0; transform-origin: 50% 0; } }
 .mod_nav_menu li a { font-size: 0.2rem; color: #ffffff; }
 
+/* Moudle fixed header
+----------------------------------------------------- */
+#header { position: fixed; top: 0; left: 0; right: 0; bottom: auto; z-index: 2; height: 0.6rem; background-color: #f8f8f8; border-bottom: 1px solid #eee; }
+#header.transparent { position: absolute; background-color: transparent; border-bottom: none; }
+#header.transparent .header_input { margin: 0.0666666667rem 0.7133333333rem 0.0666666667rem 0.16rem; background-color: rgba(255, 255, 255, 0.7); border: none; }
+#header.transparent .header_r a i { margin-top: 0; background-image: url(../../../asset/images/message_ws.png); }
+#header.transparent .header_r a span { display: block; padding-top: 0.0333333333rem; font-size: 0.16rem; color: #ffffff; }
+#header.transparent .logo { display: none; }
+#header .logo { position: absolute; top: 0.0666666667rem; right: auto; bottom: 0.0666666667rem; left: 0.0666666667rem; width: 0.8rem; height: 0.4rem; }
+#header .logo img { width: 100%; height: 100%; }
+
+.header_wraper .header_input { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 0.4666666667rem; border-radius: 0.0533333333rem; margin: 0.0666666667rem 0.5333333333rem 0.0666666667rem 0.9333333333rem; border: 1px solid #eeeeee; }
+.header_wraper .header_input img { margin-left: 0.0666666667rem; width: 0.2533333333rem; height: 0.2533333333rem; opacity: .5; }
+.header_wraper .search_input { padding-left: 0.0666666667rem; color: #999; font-size: 0.2rem; }
+
+.header_r { position: absolute; top: 3px; right: 10px; bottom: auto; left: auto; text-align: center; }
+.header_r a { display: block; }
+.header_r a i { display: inline-block; margin-top: 0.1333333333rem; width: 0.2666666667rem; height: 0.2666666667rem; background: url(../../../asset/images/message_b.png) no-repeat 0 0/cover; }
+.header_r a span { display: none; }
+
 /* Moudle Sticky
 ----------------------------------------------------- */
 .mod_sticky { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 100%; height: 100vh; font-size: 0.16rem; }
@@ -1290,7 +1310,7 @@ src: url("iconfont.eot?t=1535340915460#iefix") format("embedded-opentype"), url(
 .mod_footer_navtxt_item { text-align: center; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; border-right: 1px solid #ddd; }
 .mod_footer_navtxt_item:last-child { border-right: none; }
 .mod_footer_navpic { padding: 0.0666666667rem 0; position: relative; }
-.mod_footer_navpic_inner { width: 60%; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.mod_footer_navpic_inner { width: 80%; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 .mod_footer_navpic:after { content: ''; height: 1px; background-color: #eeeeee; position: absolute; left: 0; right: 0; bottom: -1px; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) { .mod_footer_navpic:after { -webkit-transform: scaleY(0.5); transform: scaleY(0.5); -webkit-transform-origin: 50% 0; transform-origin: 50% 0; } }
 .mod_footer_navpic_item { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; text-align: center; }
@@ -1324,6 +1344,26 @@ label.checked .mod_switch .mod_switch_radius { left: auto; right: 0; }
 .mod_switch_radius { position: absolute; top: -1px; left: 0; width: 0.28rem; height: 0.28rem; border-radius: 100%; background-color: #ffffff; -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); -webkit-transition: all .3s; transition: all .3s; }
 .mod_switch.active { background-color: #4bd0ac; border-color: #4bd0ac; }
 .mod_switch.active .mod_switch_radius { left: auto; right: 0; }
+
+/* Moudle GoTop
+----------------------------------------------------- */
+.mod_fixed_gotop { position: fixed; bottom: 0.8rem; right: 0.2rem; width: 0.6666666667rem; height: 0.6666666667rem; border: 1px solid #eeeeee; border-radius: 50%; background-color: rgba(255, 255, 255, 0.7); }
+.mod_fixed_gotop a { width: 100%; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.mod_fixed_gotop a img { width: 60%; height: 60%; -o-object-fit: cover; object-fit: cover; }
+
+/* Moudle Tabbar
+----------------------------------------------------- */
+.mod_footer { margin-bottom: 0.7333333333rem; }
+
+.mod_tabbar { position: fixed; top: auto; right: 0; bottom: 0; left: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-top: 1px solid #eeeeee; height: 0.7333333333rem; background-color: #ffffff; }
+.mod_tabbar_item { width: 25%; text-align: center; }
+.mod_tabbar_item.active span { color: #f65365; }
+.mod_tabbar_item img { width: 0.2666666667rem; height: 0.2666666667rem; opacity: .6; }
+.mod_tabbar_item span { display: block; padding-top: 0.0666666667rem; font-size: 0.16rem; color: #000304; }
+
+/* Moudle Layout
+----------------------------------------------------- */
+.mod_main_layout { margin-top: 0.6rem; }
 
 /* Moudle member
 ----------------------------------------------------- */
