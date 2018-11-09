@@ -1440,3 +1440,11 @@ label.checked .mod_switch .mod_switch_radius { left: auto; right: 0; }
 .home_good_item .goods_name { height: 0.5333333333rem; line-height: 0.2666666667rem; overflow: hidden; font-size: 0.1866666667rem; color: #000304; }
 .home_good_item .goods_price { margin-top: 0.1333333333rem; padding-top: 0.1333333333rem; padding-bottom: 0.0666666667rem; border-top: 1px solid #eeeeee; color: #DB4453; font-size: 0.16rem; }
 .home_good_item .goods_price em { font-size: 0.2rem; }
+
+.mod_head { position: absolute; top: 0; right: 0; bottom: auto; left: 0; height: 0.6rem; background-color: rgba(255, 255, 255, 0.6); }
+
+.mod_swiper { width: 100%; height: 2.6666666667rem; background-color: #fa506c; }
+
+.mod_list { background-color: #AC92ED; color: #fff; }
+
+.posf { position: fixed; }

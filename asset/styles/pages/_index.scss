@@ -255,3 +255,28 @@
         }
     }
 }
+
+.mod_head {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    height: rem(90);
+    background-color: rgba(255,255,255,.6);
+}
+
+.mod_swiper {
+    width: 100%;
+    height: rem(400);
+    background-color: #fa506c;
+}
+
+.mod_list {
+    background-color: #AC92ED;
+    color: #fff;
+}
+
+.posf {
+    position: fixed;
+}
